@@ -4,4 +4,8 @@ $(document).ready(function() {
 		alert('هل ترغب في اضافة العنصر الى العربة');
 		e.stopPropagtion();
 	});
+	$('.product-option input[type="radio"]').change(function() {
+		$(this).parents('.product-option').siblings().removeClass('active');
+		$(this).parents('.product-option').addClass('active');
+	});
 });
