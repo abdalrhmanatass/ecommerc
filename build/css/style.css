@@ -596,6 +596,114 @@ product page
 	margin-right: -8px;
 	margin-left: -8px;
 }
+
+/***************************************************
+***************************************
+************
+checkout page
+************
+**************************************
+***************************************************/
+h1.custom-heading {
+	font-size: 36px;
+	margin: 25px 0;
+}
+.custom-table .custom-media .media-object {
+	width: 80px;
+	height: 80px;
+	margin-left: 10px;
+	border: 1px solid #ebebeb;
+}
+.custom-table th,
+.custom-table td {
+	padding: 15px;
+	border-top: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
+	font-size: 120%;
+}
+.custom-table th:first-child,
+.custom-table td:first-child {
+	width: 50%;
+}
+.custom-table th {
+	color: #c2c2c2;
+	font-weight: normal;
+}
+.custom-table th:not(:first-child),
+.custom-table td:not(:first-child) {
+	text-align: center;
+}
+.custom-table .custom-media h4 {
+	font-size: 18px;
+	margin: 12px 0;
+}
+.custom-table .quantity {
+	width: 56px;
+	height: 34px;
+	padding: 0 8px;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+}
+.custom-btn-danger {
+	color: #ff5a5f;
+	border-color: #ff5a5f;
+	background-color: transparent;
+	border-radius: 3px;
+}
+.custom-btn-danger:hover,
+.custom-btn-danger:active,
+.custom-btn-danger:focus,
+.custom-btn-danger:active:hover,
+.custom-btn-danger:active:focus {
+	color: #c2101e;
+	background-color: transparent;
+	border-color: #c2101e;
+}
+.custom-table .custom-media {
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+.custom-table th:first-child {
+	padding-right: 20px;
+}
+
+.custom-table tfoot td {
+	border-bottom: none;
+	font-size: 150%;
+}
+#form-checkout button[type=submit] {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-size: 18px;
+}
+.custom-table .total-price * {
+	color: #000;
+}
+.custom-table .total-price .custom-text-muted .custom-text-muted {
+	color: #a9a9a9;
+}
+
+/***************************************************
+***************************************
+***********
+payment page
+**********
+***************************************
+***************************************************/
+.custom-input-lg {
+	border-width: 2px;
+	border-radius: 3px;
+	height: 46px !important;
+	padding: 0 16px;
+	font-size: 18px;
+}
+.custom-input-lg:focus {
+	border-color: #b86d07;
+	box-shadow: 0 0 2px 0 #b86d07;
+}
+
 /***************************************************
 ***************************************
 ***********
@@ -691,6 +799,12 @@ MEDIA QUERY
 		line-height: 50px;
 		font-size: 20px;
 	}
+	/*****************************************checkout page*******************************************************/
+	#form-checkout,
+	.table-title {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }
 @media (max-width: 991px) and (min-width: 768px) {
 	.custom-thumbnail img {
@@ -736,6 +850,10 @@ MEDIA QUERY
 	#newsletter form .input-group {
 		width: 100%;
 	}
+	/*******************************************checkout page *****************************/
+	.hide-on-small {
+		display: none;
+	}
 }
 
 @media (max-width: 575px) {
@@ -757,5 +875,11 @@ MEDIA QUERY
 	.comments {
 		padding-left: 15px;
 		padding-right: 15px;
+	}
+	/*****************************************checkout page*******************************************************/
+	#form-checkout,
+	.table-title {
+		padding-left: 0px;
+		padding-right: 0px;
 	}
 }
