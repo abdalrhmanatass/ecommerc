@@ -74,7 +74,7 @@ $(document).ready(function() {
 		var contry = $(this).val();
 
 		//اجلب مدن هذه البلد من المصفوفة
-		var cities = cityesByCountry(contry);
+		var cities = cityesByCountry[contry];
 
 		//تفريغ القائمة من المدن
 		$('#form-checkout select[name="city"]').empty();
@@ -82,11 +82,11 @@ $(document).ready(function() {
 
 		//اضافة قائمة المدن
 		cities.forEach(function(city) {
-			var $ewOption = $('<option></option>');
-			$newOption.text(city);
-			$newOption.val(city);
+			var newOption = $('<option></option>');
+			newOption.text(city);
+			newOption.val(city);
 
-			$('#form-checkout select[name="city"]').append($newOption);
+			$('#form-checkout select[name="city"]').append(newOption);
 		});
 	});
 
@@ -95,5 +95,22 @@ $(document).ready(function() {
 		event.preventDefault(); // هام لمنع السلوك الافتراضي
 
 		$(location).attr('href', 'payment.html');
+	});
+
+	//عندما تتغير طريقة الدفع
+	$('#form-checkout input[name="payment-method"]').change(function() {
+		//اجلب القيمة المختارة حاليا
+		var paymentMethod = $(this).val();
+
+		if (paymentMethod === 'on_delivery') {
+			//اذا كان عند الاستلام عطل حقول معلومات بطاقة الاتمان
+			$('#creadit-card-info input').prop('disabled', true);
+		} else {
+			//او فعلها
+			$('#creadit-card-info input').prop('disabled', false);
+		}
+
+		// بدل معلومات بطاقة الائتمان بين الظهور والإخفاء
+		$('#creadit-card-info').toggle();
 	});
 });

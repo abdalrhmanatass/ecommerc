@@ -163,12 +163,154 @@
                         <!--البيانات الدفع-->
                         <div class="col-12 col-lg-6">
                             <h3 class="custom-heading">البيانات الدفع</h3>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="" class="font-weight-bold">
+                                        <input type="radio" name="payment-method" id="" value="creadit_card" checked>
+                                        الدفع ب البطاقة
+                                    </label>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for=""class="font-weight-bold">
+                                        <input type="radio" name="payment-method" id="" value="on_delivery">
+                                       الدفع عند الاستلام
+                                    </label>
+                                </div>
+                            </div>
+                            <!--بيانات بطاقة الاتمان-->
+                            <div class="row" id="creadit-card-info">
+                                <div class="form-group col-md-6">
+                                    <input type="text" class="form-control custom-form-control input-lg custom-input-lg" name="creadit_card_number" placeholder="رقم البطاقة" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="number" class="form-control custom-form-control input-lg custom-input-lg" name="creadit_card_expiration-month"  min="1" max="12" placeholder="شهر البطاقة" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="number" class="form-control custom-form-control input-lg custom-input-lg" name="creadit_card_expiration-year"  min="2020" max="2030" placeholder="سنة الانتهاء" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="number" class="form-control custom-form-control input-lg custom-input-lg" name="creadit_card_cvv" placeholder="cvv" required>
+                                </div>
+                            </div>
+                            <!--نهاية بيانات بطاقة الاتمان-->
                         </div>
                     </div>
                 </form>
+
+                <!--عربة الشراء-->
+                <div class="row">
+                    <h3 class="custom-heading table-title">طلبك</h3>
+                    <form action="" id="form-checkout">
+                        <table class="custom-table">
+                            <thead>
+                                <tr>
+                                    <th>المنتج </th>
+                                    <th>السعر </th>
+                                    <th>العدد المطلوب</th>
+                                    <th class="hide-on-small">السعر الاجمالي</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-product-info data-product-price="400">
+                                    <td>
+                                        <div class="media custom-media">
+                                            <div class="media-left d-none d-md-block">
+                                                <img class="media-object" src="./images/lacoste_1.jpg" alt="تي شيرت رجالي من لاكوست">
+                                            </div>   
+                                            <div class="media-body">
+                                                <h4>تي شيرت رجالي من لاكوست</h4>
+                                                <div class="custom-text-muted">ملابس رجالي</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        400$
+                                    </td>
+                                    <td>
+                                        <select name="quantity" id="" class="form-control custom-form-control select-inline quantity" data-product-quantity>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3" selected>3</option>
+                                        </select>
+                                    </td>
+                                    <td class="total-price-for-product hide-on-small">
+                                        1200$
+                                    </td>
+                                    <td>
+                                        <button class="btn custom-btn btn-danger custom-btn-danger" data-remove-from-cart>
+                                            <span class="d-none d-md-block">حذف</span>
+                                            <span class="d-md-none d-sm-block">
+                                                <i class="far fa-trash-alt"></i>
+                                            </span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr data-product-info data-product-price="300">
+                                    <td>
+                                        <div class="media custom-media">
+                                            <div class="media-left d-none d-md-block">
+                                                <img class="media-object" src="./images/adidas_1.jpg" alt="تي شيرت أديداس">
+                                            </div>   
+                                            <div class="medai-body">
+                                                <h4>تي شيرت أديداس</h4>
+                                                <div class="custom-text-muted">ملابس رجالي</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        300$
+                                    </td>
+                                    <td>
+                                        <select name="quantity" id="" class="form-control custom-form-control select-inline quantity" data-product-quantity>
+                                            <option value="1" selected>1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </td>
+                                    <td class="total-price-for-product hide-on-small">
+                                        300$
+                                    </td>
+                                    <td>
+                                        <button class="btn custom-btn btn-danger custom-btn-danger" data-remove-from-cart>
+                                            <span class="d-none d-md-block">حذف</span>
+                                            <span class="d-md-none d-sm-block">
+                                                <i class="far fa-trash-alt"></i>
+                                            </span>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5" class="total-price">
+                                        <span class="custom-text-muted">
+                                            <span class="custom-text-muted">
+                                                السعر الإجمالي للمنتجات:
+                                            </span>
+                                            <span id="total-price-for-all-products">1500</span>
+                                            دولار
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <button type="submit" class="btn custom-btn btn-primary custom-btn-primary2 custom-btn-with-icon btn-lg" data-Complete>
+                            <span class="clearfix">
+                                <span class="float-left">
+                                    اكمال عملية الشراء
+                                </span>
+                                <span class="float-right">
+                                    <i class="fa fa-dollar-sign fa-lg"></i>
+                                </span>
+                            </span>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
 
+        
         <!--بداية قسم تزيل الصفحة-->
         <div class="row" id="footer">
             <div class="col-12 text-center" id="brand-logoes">
