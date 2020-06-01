@@ -1,0 +1,47 @@
+@import './old-style.css';
+@import '_varibl.scss';
+@import '_custom_table.scss';
+@import '_mixine.scss';
+@import '_slider.scss';
+@import '_custom_sale.scss';
+.custom-form-control,
+.custom-btn {
+	color: #868686;
+	border: 1px solid #ebebeb;
+	box-shadow: none;
+	border-radius: 2px;
+	font-size: 14px;
+	padding: 5.5px 13px;
+	transition: all .3s ease;
+}
+.custom-btn:hover {
+	background-color: #d4d4d4;
+	border-color: #8c8c8c;
+}
+
+.custom-btn-primary {
+	@include color-btn-style($brand-primary);
+}
+.custom-btn-danger {
+	@include color-btn-style($brand-danger);
+}
+
+.custom-btn-primary2 {
+	color: white;
+	background-color: $brand-primary;
+	border-color: $brand-primary;
+	&:hover,
+	&:active,
+	&:focus,
+	&:active:hover,
+	&:active:focus,
+	&:hover:disabled {
+		border-color: #b86d07;
+		background-color: #b86d07;
+	}
+}
+.add-to-card-btn {
+	background-color: #ffffff;
+	color: $brand-secoundary;
+	font-weight: bold;
+}
