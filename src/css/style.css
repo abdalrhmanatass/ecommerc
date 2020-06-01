@@ -703,6 +703,130 @@ payment page
 	border-color: #b86d07;
 	box-shadow: 0 0 2px 0 #b86d07;
 }
+/**************************************************
+*************************************
+***********
+search page
+**********
+************************************
+***************************************************/
+#form-advanced-search {
+	border: 1px solid #ebebeb;
+	padding-bottom: 20px;
+	margin-bottom: 35px;
+	display: table;
+}
+#form-advanced-search .custom-panel {
+	border: none;
+	padding: 5px;
+}
+.custom-panel .card-header {
+	background-color: transparent;
+	margin-bottom: 15px;
+	padding: 7px 10px 13px;
+}
+.custom-list-group > .list-group-item {
+	border: none;
+	padding: 0 10px 14px 0;
+}
+.custom-list-group > .list-group-item:last-child {
+	padding: 0 10px 0 0;
+}
+.custom-list-group {
+	border-bottom: 1px solid #ebebeb;
+}
+#form-advanced-search input[type=checkbox] + label {
+	cursor: pointer;
+	font-weight: bold;
+}
+.ui-slider {
+	margin: 25px 0 35px;
+	height: 2px;
+	background-color: #c5c5c5;
+}
+.ui-slider .ui-slider-handle {
+	background-color: #f8ad47;
+	border: none;
+	border-radius: 50%;
+	height: 12px;
+	width: 12px;
+	top: -6px;
+}
+.ui-slider .ui-slider-range {
+	border: 1px solid #f8ad47;
+	top: -1px;
+}
+#form-advanced-search button {
+	font-size: 18px;
+	padding: 9px 0;
+}
+.custom-pagination li a {
+	border: 1px solid #ebebeb;
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	margin-right: 3px;
+	margin-left: 3px;
+	color: #c2c2c2;
+	display: inline-block;
+	text-align: center;
+	transition: all 0.3s ease;
+}
+.custom-pagination li a.active {
+	background-color: #f8ad47;
+	border-color: #f8ad47;
+	color: #fff;
+}
+.custom-pagination li a:active,
+.custom-pagination li a:hover,
+.custom-pagination li a:focus {
+	color: #ab7731;
+	border-color: #ab7731;
+}
+.custom-pagination {
+	margin: 25px 0;
+}
+#search-results .custom-thumbnail {
+	margin-right: -8px;
+	margin-left: -8px;
+}
+#search-results h3.heading-with-border-bottom {
+	margin-top: 0;
+}
+/***************************************************
+***************************************
+***********
+contact page
+***********
+***************************************
+***************************************************/
+#map {
+	padding: 0;
+}
+#contact-option h4 {
+	font-size: 18px;
+	padding-bottom: 12px;
+}
+#contact-option .heading-with-border-bottom {
+	margin-bottom: 30px;
+}
+#contact-info {
+	margin-bottom: 25px;
+}
+
+#contact-info i {
+	color: #f3af41;
+	font-size: 18px;
+	margin: 10px;
+	width: 25px;
+	text-align: center;
+}
+#contact-option textarea {
+	height: 128px !important;
+}
+#contact-option {
+	margin-bottom: 25px;
+}
 
 /***************************************************
 ***************************************
@@ -804,6 +928,25 @@ MEDIA QUERY
 	.table-title {
 		padding-left: 15px;
 		padding-right: 15px;
+	}
+	/***************************************contact page ************************************************************/
+	#form-subscription {
+		margin-bottom: 40px;
+	}
+	/********************************************search page*************************************************/
+	.ui-slider .ui-slider-handle {
+		height: 20px;
+		width: 20px;
+		top: -10px;
+	}
+	.custom-list-group {
+		border-bottom: 0px solid #000;
+	}
+	#search-pagination {
+		text-align: center;
+	}
+	.custom-pagination {
+		display: inline-flex;
 	}
 }
 @media (max-width: 991px) and (min-width: 768px) {
