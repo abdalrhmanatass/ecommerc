@@ -6,7 +6,7 @@
   "dependencies": {
     "del": "^5.1.0",
     "git": "^0.1.5",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-connect": "^5.7.0",
     "gulp-css-flipper": "^1.0.2",
